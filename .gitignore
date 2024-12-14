@@ -1,0 +1,7 @@
+__pycache__/
+output/
+drafts/
+.vscode/
+.venv/
+.idea/
+memo.txt
