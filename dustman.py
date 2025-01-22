@@ -19,13 +19,16 @@ class Map:
         self.height = h
         self.map = [[Cell() for _ in range(self.width)] for _ in range(self.height)]
         self.dustman = None
-        
-        
+
+
     def show(self):
-        border = "=" * len(self.map[0]) * 3
+        border = " " + "-=-" * len(self.map[0])
         print(border)
         for y in range(self.height):
+            print("|", end="")
+            num_line = " "
             for x in range(self.width):
+                num_line += f" {x} "
                 if self.map[y][x].dustman_here:
                     print(" d ", end="")
                     continue
@@ -36,8 +39,9 @@ class Map:
                     print(" t ", end="")
                 elif isinstance(content, Bin):
                     print(" b ", end="")
-            print()
+            print("|", y)
         print(border)
+        print(num_line)
         
         
     def add_dustman(self, d):
