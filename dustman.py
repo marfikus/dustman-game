@@ -244,55 +244,58 @@ class Packet:
     pass
 
 
-map = Map()
-# map.show()
-dustman = Dustman("Nick")
-# dustman.show()
-map.add_dustman(dustman)
-# map.show()
-map.add_trash(10)
-# map.map[0][3].content = Trash()
-# map.map[0][4].content = Trash()
-map.add_bin(5, 3)
-# map.map[0][6].content = Bin()
-map.show()
-
-# dustman.pick_up_trash()
-# dustman.throw_away_trash()
-# dustman.move("right")
-# dustman.move("right")
-# dustman.move("right")
-# dustman.pick_up_trash()
-# dustman.move("right")
-# dustman.pick_up_trash()
-# dustman.move("right")
-# dustman.move("right")
-# dustman.throw_away_trash()
-# dustman.move("left")
-# dustman.move("left")
-# dustman.pick_up_trash()
-# dustman.move("right")
-# dustman.move("right")
-# dustman.throw_away_trash()
-# dustman.move("right")
-# dustman.move("right")
-
-while True:
-    com = input()
-    if com == "q":
-        break
-    elif com == "s":
-        dustman.move("left")
-    elif com == "f":
-        dustman.move("right")
-    elif com == "e":
-        dustman.move("up")
-    elif com == "d":
-        dustman.move("down")
-    elif com == "a":
-        dustman.pick_up_trash()
-    elif com == "r":
-        dustman.throw_away_trash()
+def main():
+    map = Map()
+    # map.show()
+    dustman = Dustman("Nick")
+    # dustman.show()
+    map.add_dustman(dustman)
+    # map.show()
+    map.add_trash(10)
+    # map.map[0][3].content = Trash()
+    # map.map[0][4].content = Trash()
+    map.add_bin(5, 3)
+    # map.map[0][6].content = Bin()
     map.show()
 
+    # dustman.pick_up_trash()
+    # dustman.throw_away_trash()
+    # dustman.move("right")
+    # dustman.move("right")
+    # dustman.move("right")
+    # dustman.pick_up_trash()
+    # dustman.move("right")
+    # dustman.pick_up_trash()
+    # dustman.move("right")
+    # dustman.move("right")
+    # dustman.throw_away_trash()
+    # dustman.move("left")
+    # dustman.move("left")
+    # dustman.pick_up_trash()
+    # dustman.move("right")
+    # dustman.move("right")
+    # dustman.throw_away_trash()
+    # dustman.move("right")
+    # dustman.move("right")
 
+    while True:
+        com = input()
+        if com == "q":
+            break
+        elif com == "s":
+            dustman.move("left")
+        elif com == "f":
+            dustman.move("right")
+        elif com == "e":
+            dustman.move("up")
+        elif com == "d":
+            dustman.move("down")
+        elif com == "a":
+            dustman.pick_up_trash()
+        elif com == "r":
+            dustman.throw_away_trash()
+        map.show()
+
+
+if __name__ == "__main__":
+    main()
